@@ -64,7 +64,15 @@ var userinfoSchema = Schema({
     password:
 	{
 		type:String,
-	}
+	},
+	role: {
+		type: String,
+		default: 'basic',
+		enum: ["basic", "supervisor", "admin"]
+	   },
+	   accessToken: {
+		type: String
+	   }
 
 });
 
